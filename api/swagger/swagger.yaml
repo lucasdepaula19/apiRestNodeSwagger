@@ -22,7 +22,7 @@ paths:
     # binds a127 app logic to a route
     x-swagger-router-controller: pedidoController
     get:
-      description: Returns 'Hello' to the caller
+      description: Returns list of pedidos
       # used as the method name of the controller
       operationId: IDGET
       parameters: []
@@ -38,7 +38,7 @@ paths:
           schema:
             $ref: "#/definitions/ErrorResponse"
     post:
-      description: Returns 'Hello' to the caller
+      description: Create products in the list
       # used as the method name of the controller
       operationId: IDPOST
       parameters:
@@ -63,13 +63,13 @@ paths:
     # binds a127 app logic to a route
     x-swagger-router-controller: pedidoController
     get:
-      description: Returns 'Hello' to the caller
+      description: Return an pedido
       # used as the method name of the controller
       operationId: IDGETBYID
       parameters:
         - name: pedidoID
           in: path
-          description: The name of the person to whom to say hello
+          description: Return an pedido
           required: true
           type: integer
           format: int64
@@ -85,13 +85,13 @@ paths:
           schema:
             $ref: "#/definitions/ErrorResponse"  
     put:
-      description: Returns 'Hello' to the caller
+      description: Update an pedido
       # used as the method name of the controller
       operationId: IDPUT
       parameters:
         - name: pedidoID
           in: path
-          description: The name of the person to whom to say hello
+          description: Update an pedido
           required: true
           type: integer
           format: int64
@@ -107,13 +107,13 @@ paths:
           schema:
             $ref: "#/definitions/ErrorResponse"
     delete:
-      description: Returns 'Hello' to the caller
+      description: Delete an pedido
       # used as the method name of the controller
       operationId: IDDELETE
       parameters:
         - name: pedidoID
           in: path
-          description: The name of the person to whom to say hello
+          description: Delete an pedido
           required: true
           type: integer
           format: int64
