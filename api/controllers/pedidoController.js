@@ -44,7 +44,7 @@ function post(req, res) {
 
 function put(req, res) {
   let param_id = JSON.stringify(req.swagger.params.pedidoID.value);
-  let param_body = req.body;
+  let param_body = req.swagger.params.bodyxo;
 
 res.json("id: "+ param_id + " body: "+param_body);
 
